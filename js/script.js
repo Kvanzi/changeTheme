@@ -1,17 +1,16 @@
-const btn = document.querySelector('.button');
+const button = document.querySelector(".button");
 const body = document.body;
 
-
-if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark');
-    btn.classList.add('dark');
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
+  button.classList.add("dark");
 }
-function toggleTheme () {
-    if (btn) {
-        btn.classList.toggle('dark');
-        body.classList.toggle('dark');
-        localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
-    }
+function toggleTheme() {
+  if (button) {
+    button.classList.toggle("dark");
+    body.classList.toggle("dark");
+    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+  }
 }
 
-btn.addEventListener("click", toggleTheme);
+button.addEventListener("click", toggleTheme);
